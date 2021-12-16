@@ -3,10 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { MantineProvider } from '@mantine/core';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MantineProvider
+      theme={{
+        colors: {
+          brand: ['#F0BBDD', '#ED9BCF', '#EC7CC3', '#ED5DB8', '#F13EAF', '#F71FA7', '#FF00A1', '#E00890', '#C50E82', '#AD1374'],
+        },
+        other: {
+          colorPrimary: '#FA5A00'
+        },
+      }}
+    >
+      <App />
+    </MantineProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
